@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+<head>
+	<!--<link rel="stylesheet" href="style.css">-->
+	<title>Crystal Bruce</title>
+	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+
+		body {
+			background-color: #fff;
+			font-family: Arial, Helvetica, sans-serif;
+			padding: 95px 15px 73px 15px;
+		}
+
+		.header {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 50px;
+			background-color: #f05454;
+			display: flex;
+			align-items: center;
+			padding: 15px;
+		}
+
+		.header:after {
+			content: '';
+			position: absolute;
+			background-color: rgba(0, 0, 0, 0.0);
+			left: 0;
+			right: 0;
+			top: 80px;
+			height: 8px;
+			width: 100vw;
+			background-image: url("scallop.png");
+			background-repeat: repeat-x;
+			background-size: auto 100%;
+			background-position: center top;
+		}
+
+		.header .favicon {
+			height: 50px;
+			width: 50px;
+			border-radius: 25px;
+			background-color: #fff;
+			color: #333;
+			font-size: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: 15px;
+		}
+
+		.header .name {
+			color: #fff;
+			font-size: 40px;
+		}
+
+		.header .links {
+			margin-left: auto;
+		}
+
+		.header .links a {
+			color: white;
+			font-size: 24px;
+		}
+
+		.header .links a:after {
+			content: "\2022";
+			display: inline-block;
+			text-decoration: none;
+			padding-left: 10px;
+			padding-right: 5px;
+		}
+
+		.header .links a:last-child:after {
+			content: "";
+			padding: 0;
+		}
+
+		.main {
+			min-height: 100vh;
+			max-width: 960px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.main h2 {
+			font-size: 32px;
+			color: #8f9498;
+			font-weight: normal;
+		}
+
+		.main .hero {
+			background-color: #e9edf0;
+			height: 200px;
+			border-radius: 5px;
+			width: 80%;
+			margin: auto;
+		}
+
+		.main .hero .heroimg {
+			width: 200px;
+			height: 200px;
+			border-radius: 5px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.main .hero .herotext {
+			display: inline-block;
+			vertical-align: middle;
+			padding-left: 10px;
+			color: #8f9498;
+			font-size: 24px;
+		}
+
+		.main .hero .herotext h1 {
+			margin: 0 0 10px;
+			font-weight: normal;
+			font-size: 40px;
+		}
+
+		.main .hero .herotext h1 .highlight {
+			color: #f05454;
+		}
+
+		.footer {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100vw;
+			height: 50px;
+			background-color: #f05454;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.footer:before {
+			content: '';
+			position: absolute;
+			background-color: rgba(0, 0, 0, 0.0);
+			left: 0;
+			right: 0;
+			bottom: 50px;
+			height: 8px;
+			width: 100vw;
+			background-image: url("scallop.png");
+			background-repeat: repeat-x;
+			background-size: auto 100%;
+			background-position: center top;
+			transform: scaleY(-1);
+		}
+
+		.footer a {
+			color: white;
+		}
+
+		.about .inner,
+		.publications .inner {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		.publications .inner ul {
+			margin-left: 0;
+			padding-left: 15px;
+		}
+
+		.contact {
+			text-align: center;
+		}
+
+		.contact h2 {
+			text-align: left;
+		}
+
+		.contact .maillink {
+			background-color: #f05454;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			display: inline-block;
+			font-size: 16px;
+			border-radius: 5px;
+			text-decoration: none;
+		}
+
+		.contact .maillink .underline {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+
+<body>
+	<section class="header">
+		<div class="favicon">
+			favicon
+		</div>
+		<div class="name">
+			Crystal Bruce
+		</div>
+		<div class="links">
+			<a href="#about">About Me</a>
+			<a href="#publications">Publications</a>
+			<a href="#gallery">Gallery</a>
+			<a href="#contact">Contact Me</a>
+		</div>
+	</section>
+	<section class="main">
+		<section class="hero">
+			<img src="heroweb.png" class="heroimg">
+			<div class="herotext">
+				<h1>Hi, I'm <br><span class="highlight">Crystal Bruce</span>.</h1>
+				I write books for kids.
+			</div>
+		</section>
+
+		<section class="about" id="about">
+			<h2>About Me</h2>
+			<div class="inner">
+				<p>I'm an aspiring children's writer and illustrator. I've always had a love for reading but I fell in
+					love
+					with picture books while reading to my own child. My love for stories was strengthened after
+					spending
+					time working in both public and school libraries. I currently live in rural Ontario, Canada with my
+					husband and daughter.</p>
+				<p>My illustration journey has just begun. I came across paper cutting from (you guessed it) a book at
+					the
+					library. I build scenes with simple shapes and add life with watercolours and layering. The whole
+					piece
+					is captured through photography.</p>
+			</div>
+		</section>
+
+
+		<section class="publications" id="publications">
+			<h2>Publications, Displays, Exhibits</h2>
+			<div class="inner">
+				<ul>
+					<li>
+						<i>Whispers in the Woods</i> &mdash;
+						Watercolour & cut paper. Displayed May-June, 2025 at the <i>Perth & District Union Public Library's</i> Emerging Artists Exhibition.
+					</li>
+					<li>
+						<i>Goldilocks in Pieces</i> &mdash;
+						Watercolour & cut paper. Displayed May-June, 2025 at the <i>Perth & District Union Public Library's</i> Emerging Artists Exhibition.
+					</li>
+					<li>
+						<i>Remembering Christmas</i> &mdash;
+						Short story (500 words). Published December 17, 2024 in the <i>Lanark Era</i>.
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="gallery" id="gallery">
+			<h2>Gallery</h2>
+			<!-- Put images here -->
+		</section>
+
+		<section class="contact" id="contact">
+			<h2>Contact Me</h2>
+			<a class="maillink" href="mailto:crystal@petitestory.ca">
+				<span class="underline">Say hi</span>
+				&#128075;
+			</a>
+		</section>
+
+	</section>
+	<section class="footer">
+		&copy; 2025 Crystal Bruce &nbsp; &mdash; &nbsp;
+		<a href="https://www.petitestory.ca/">petitestory.ca</a>
+	</section>
+</body>
+
+</html>
