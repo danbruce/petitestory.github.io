@@ -12,7 +12,9 @@
 		body {
 			background-color: #fff;
 			font-family: Arial, Helvetica, sans-serif;
-			padding: 95px 15px 73px 15px;
+			padding: 125px 15px 90px 15px;
+			position: relative;
+			margin: 0;
 		}
 
 		.header {
@@ -46,9 +48,6 @@
 			height: 50px;
 			width: 50px;
 			border-radius: 25px;
-			background-color: #fff;
-			color: #333;
-			font-size: 10px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -83,8 +82,10 @@
 		}
 
 		.main {
-			min-height: 100vh;
+			min-height: calc(100vh - 215px);
 			max-width: 960px;
+			margin-top: 0;
+			margin-bottom: 0;
 			margin-left: auto;
 			margin-right: auto;
 		}
@@ -129,12 +130,23 @@
 			color: #f05454;
 		}
 
+		.main .gallery .gallery-grid {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			row-gap: 40px;
+		}
+
+		.main .gallery .gallery-grid img {
+			border-radius: 5px;
+		}
+
 		.footer {
 			position: absolute;
+			bottom: 0;
 			left: 0;
 			right: 0;
-			bottom: 0;
-			width: 100vw;
+			width: 100%;
 			height: 50px;
 			background-color: #f05454;
 			color: #fff;
@@ -198,13 +210,14 @@
 			text-decoration: underline;
 		}
 	</style>
+	<link rel="icon" type="image/png" href="images/fav.png">
+	<link href="https://cdn.jsdelivr.net/npm/bilderrahmen@1.0.0/bilderrahmen.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/gh/requirejs/requirejs@2.3.5/require.js"></script>
 </head>
 
 <body>
 	<section class="header">
-		<div class="favicon">
-			favicon
-		</div>
+		<img class="favicon" src="images/fav.png" alt="favicon">
 		<div class="name">
 			Crystal Bruce
 		</div>
@@ -217,7 +230,7 @@
 	</section>
 	<section class="main">
 		<section class="hero">
-			<img src="heroweb.png" class="heroimg">
+			<img src="images/heroweb.png" class="heroimg" alt="Crystal Bruce">
 			<div class="herotext">
 				<h1>Hi, I'm <br><span class="highlight">Crystal Bruce</span>.</h1>
 				I write books for kids.
@@ -248,11 +261,13 @@
 				<ul>
 					<li>
 						<i>Whispers in the Woods</i> &mdash;
-						Watercolour & cut paper. Displayed May-June, 2025 at the <i>Perth & District Union Public Library's</i> Emerging Artists Exhibition.
+						Watercolour & cut paper. Displayed May-June, 2025 at the <i>Perth & District Union Public
+							Library's</i> Emerging Artists Exhibition.
 					</li>
 					<li>
 						<i>Goldilocks in Pieces</i> &mdash;
-						Watercolour & cut paper. Displayed May-June, 2025 at the <i>Perth & District Union Public Library's</i> Emerging Artists Exhibition.
+						Watercolour & cut paper. Displayed May-June, 2025 at the <i>Perth & District Union Public
+							Library's</i> Emerging Artists Exhibition.
 					</li>
 					<li>
 						<i>Remembering Christmas</i> &mdash;
@@ -264,7 +279,28 @@
 
 		<section class="gallery" id="gallery">
 			<h2>Gallery</h2>
-			<!-- Put images here -->
+			<div class="gallery-grid">
+				<a class="gallery_link" href="images/gallery/fullsize/cozy-worm.png" target="_blank">
+					<img src="images/gallery/thumbnails/thumbnail-cozy-worm.png" data-bilderrahmen="Gallery"
+						data-bilderrahmen-title="Cozy Worm">
+				</a>
+				<a class="gallery_link" href="images/gallery/fullsize/spine.png" target="_blank">
+					<img src="images/gallery/thumbnails/thumbnail-spine.png" data-bilderrahmen="Gallery"
+						data-bilderrahmen-title="Spine">
+				</a>
+				<a class="gallery_link" href="images/gallery/fullsize/swimming-in-books.png" target="_blank">
+					<img src="images/gallery/thumbnails/thumbnail-swimming-in-books.png" data-bilderrahmen="Gallery"
+						data-bilderrahmen-title="Swimming In Books">
+				</a>
+				<a class="gallery_link" href="images/gallery/fullsize/in-pieces.png" target="_blank">
+					<img src="images/gallery/thumbnails/thumbnail-in-pieces.png" data-bilderrahmen="Gallery"
+						data-bilderrahmen-title="In Pieces">
+				</a>
+				<a class="gallery_link" href="images/gallery/fullsize/whispers.png" target="_blank">
+					<img src="images/gallery/thumbnails/thumbnail-whispers.png" data-bilderrahmen="Gallery"
+						data-bilderrahmen-title="Whispers">
+				</a>
+			</div>
 		</section>
 
 		<section class="contact" id="contact">
@@ -280,6 +316,12 @@
 		&copy; 2025 Crystal Bruce &nbsp; &mdash; &nbsp;
 		<a href="https://www.petitestory.ca/">petitestory.ca</a>
 	</section>
+
+	<script>
+		require(['https://cdn.jsdelivr.net/npm/bilderrahmen@1.0.0/bilderrahmen.umd.es5.js'], function (module) {
+			new module.Bilderrahmen({ closeOnOutsideClick: true });
+		});
+	</script>
 </body>
 
 </html>
